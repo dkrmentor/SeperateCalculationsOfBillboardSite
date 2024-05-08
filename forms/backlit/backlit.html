@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tabs</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="tabs-container">
+
+
+        <div id="tab3" class="content ">
+            <div class="container">
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="tab3quantity" class="input-box" placeholder="Enter quantity">
+                    </div>
+                    <div class="form-item">
+                        <label for="image">Image Upload:</label>
+                        <input type="file" id="tab3image" class="file-upload">
+                    </div>
+                    <div class="form-item">
+                        <label for="ajaxPrice">Price:</label>
+                        <input type="text" id="tab3ajaxPrice" class="input-box" placeholder="Enter Price">
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="material">Select Material:</label>
+                    <div class="radio-box-container">
+                        <input type="radio" id="tab3material15oz" name="material" class="radio-box">
+                        <label for="material15oz">15oz</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="dimensions">Enter Dimensions:</label>
+                        <div class="dimensions-container">
+                            <input type="number" id="tab3length-feet" class="input-box" placeholder="Length-feet "
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab3length-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
+
+
+
+                            <input type="number" id="tab3width-feet" class="input-box" placeholder="Width-feet"
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab3width-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
+
+                        </div>
+
+
+                        <div class="dimensions-container">
+                            <input type="number" id="tab3bleed" class="input-box" placeholder="bleed" oninput="validateFeetInput(this)">
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="finishingoptions">Finishing Options:</label>
+                        <div class="switch-container">
+                            <span class="switch-label">Hem</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab3hemSwitch">
+                                <span class="slider"></span>
+                            </label>
+
+                            <span class="switch-label">Straight Cut Edge</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab3straightcutedgeSwitch">
+                                <span class="slider"></span>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="bleedSwitch">Does Art Include Bleed:</label>
+
+                        <label class="switch">
+                            <input type="checkbox" id="tab3bleedSwitch">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label for="proofSwitch">Would You Like a Proof:</label>
+                        <label class="switch">
+                            <input type="checkbox" id="tab3proofSwitch">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="upgrades">Upgrades:</label>
+                        <div class="switch-container">
+
+                            <span class="switch-label">Art Service</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab3artServiceSwitch">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="orderNotes">Order Notes:</label>
+                        <textarea id="tab3orderNotes" class="text-box" placeholder="Enter order notes"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <button id="tab3orderNowBtn" class="btn">Order Now</button>
+                </div>
+                <div id="tab3orderSummary" style="display: none;">
+                    <!-- This div will display the order summary -->
+                    <h2>Order Summary</h2>
+                      <!-- This div will display the order summary -->
+                      <div id="tab3quantityvalue" class="summary-section"></div>
+                      <div id="tab3option" class="summary-section"></div>
+                      <div id="tab3pricing" class="summary-section"></div>
+                </div>
+            </div>
+        </div>
+   
+
+        <script src="scripts/backlit.js"> </script>
+
+
+</body>
+
+</html>

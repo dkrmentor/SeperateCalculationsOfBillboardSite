@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tabs</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="tabs-container">
+
+        <div id="tab4" class="content ">
+            <div class="container">
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="quantity">Quantity:</label>
+                        <select id="tab4quantity" class="input-box">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+
+
+
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                            <option value="60">60</option>
+                            <option value="70">70</option>
+                            <option value="80">80</option>
+                            <option value="90">90</option>
+                            <option value="100">100</option>
+                            <option value="150">150</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                        </select>
+
+                    </div>
+                    <div class="form-item">
+                        <label for="image">Image Upload:</label>
+                        <input type="file" id="tab4image" class="file-upload">
+                    </div>
+                    <div class="form-item">
+                        <label for="ajaxPrice">Price:</label>
+                        <input type="text" id="tab4ajaxPrice" class="input-box" placeholder="Enter Price">
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-item">
+                    
+                        <div class="dimensions-container">
+                            <label for="dimension">Enter Dimensions:</label>
+                            <select id="tab4dimension" class="input-box">
+                                <option value="18x24">18 x 24</option>
+                                <option value="24x36">24 x 36</option>
+                                <option value="24x24">24 x 24</option>
+                                <option value="12x18">12 x 18</option>
+                                <option value="24x32">24 x 32</option>
+                                <option value="36x48">36 x 48</option>
+                                <option value="12x24">12 x 24</option>
+                                <option value="24x48">24 x 48</option>
+                                <option value="12x12">12 x 12</option>
+                                <option value="32x48">32 x 48</option>
+                            </select>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="material">Select Material:</label>
+                    <div class="radio-box-container">
+                        <input type="radio" id="tab4material4mm" name="material" class="radio-box" checked>
+                        <label for="material4mm">4mm</label>
+
+                        <input type="radio" id="tab4material6mm" name="material" class="radio-box">
+                        <label for="material6mm">6mm</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="finishingoptions">Finishing Options:</label>
+                        <div class="switch-container">
+                            <label class="switch">
+                                <input type="checkbox" id="tab4verticleFlutesSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Verticle Flutes</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab4hStakesSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">H Stakes</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab4grommetsSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Grommets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="artSwitch">Upgrades Art Service</label>
+                        <label class="switch">
+                            <input type="checkbox" id="tab4artServiceSwitch">
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+                    <div class="form-item">
+                        <label for="proofSwitch">Would You Like a Proof:</label>
+                        <label class="switch">
+                            <input type="checkbox" id="tab4proofSwitch">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="orderNotes">Order Notes:</label>
+                        <textarea id="tab4orderNotes" class="text-box" placeholder="Enter order notes"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <button id="tab4orderNowBtn" class="btn">Order Now</button>
+                </div>
+                <div id="tab4orderSummary" style="display: none;">
+                    <!-- This div will display the order summary -->
+                    <h2>Order Summary</h2>
+                      <!-- This div will display the order summary -->
+                      <div id="tab4quantityvalue" class="summary-section"></div>
+                      <div id="tab4option" class="summary-section"></div>
+                      <div id="tab4pricing" class="summary-section"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/yards.js"> </script>
+
+
+</body>
+
+</html>

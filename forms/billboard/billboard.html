@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tabs</title>
+    <link rel="stylesheet" href="../style.css">
+    
+</head>
+
+<body>
+    <div class="tabs-container">
+
+          <div id="tab1" class="content">
+            <div class="container">
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="tab1quantity" class="input-box" placeholder="Enter quantity">
+                    </div>
+                    <div class="form-item">
+                        <label for="image">Image Upload:</label>
+                        <input type="file" id="tab1image" class="file-upload">
+                    </div>
+                    <div class="form-item">
+                        <label for="ajaxPrice">Price:</label>
+                        <input type="text" id="tab1ajaxPrice" class="input-box" placeholder="Enter Price">
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="material">Select Material:</label>
+                    <div class="radio-box-container">
+                        <input type="radio" id="tab1material7oz" name="material" class="radio-box">
+                        <label for="material7oz">7oz</label>
+
+                        <input type="radio" id="tab1material13oz" name="material" class="radio-box">
+                        <label for="material13oz">13oz</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="dimensions">Enter Dimensions:</label>
+                        <div class="dimensions-container">
+                            <input type="number" id="tab1length-feet" class="input-box" placeholder="Length-feet "
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab1length-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
+
+
+
+                            <input type="number" id="tab1width-feet" class="input-box" placeholder="Width-feet"
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab1width-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
+
+                        </div>
+
+                        <div class="dimensions-container">
+                            <input type="number" id="tab1bleed" class="input-box" placeholder="bleed" oninput="validateFeetInput(this)">
+                            <input type="number" id="tab1pocket" class="input-box" placeholder="pocket">
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="bleedSwitch">Does Art Include Bleed:</label>
+                        <label class="switch">
+                            <input type="checkbox" id="tab1bleedSwitch">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label for="proofSwitch">Would You Like a Proof:</label>
+                        <label class="switch">
+                            <input type="checkbox" id="tab1proofSwitch">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="upgrades">Upgrades:</label>
+                        <div class="switch-container">
+                            <label class="switch">
+                                <input type="checkbox" id="tab1hqPrintingSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">HQ Printing</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab1expressPrintSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Express Print</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab1artServiceSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Art Service</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="orderNotes">Order Notes:</label>
+                        <textarea id="tab1orderNotes" class="text-box" placeholder="Enter order notes"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <button id="tab1orderNowBtn" class="btn">Order Now</button>
+                </div>
+                <div id="tab1orderSummary" style="display: none;">
+                    <!-- This div will display the order summary -->
+                    <h2>Order Summary</h2>
+                      <!-- This div will display the order summary -->
+                      <div id="tab1quantityvalue" class="summary-section"></div>
+                      <div id="tab1option" class="summary-section"></div>
+                      <div id="tab1pricing" class="summary-section"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="scripts/billboard.js"> </script>
+   
+
+
+</body>
+
+</html>

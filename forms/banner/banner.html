@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tabs</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="tabs-container">
+
+
+
+        <div id="tab2" class="content ">
+            <div class="container">
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="tab2quantity" class="input-box" placeholder="Enter quantity">
+                    </div>
+                    <div class="form-item">
+                        <label for="image">Image Upload:</label>
+                        <input type="file" id="tab2image" class="file-upload">
+                    </div>
+                    <div class="form-item">
+                        <label for="ajaxPrice">Price:</label>
+                        <input type="text" id="tab2ajaxPrice" class="input-box" placeholder="Enter Price">
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="material">Select Material:</label>
+                    <div class="radio-box-container">
+                        <input type="radio" id="tab2material7oz" name="material" class="radio-box">
+                        <label for="material7oz">7oz</label>
+
+                        <input type="radio" id="tab2material13oz" name="material" class="radio-box">
+                        <label for="material13oz">13oz</label>
+
+                        <input type="radio" id="tab2material9oz" name="material" class="radio-box">
+                        <label for="material9oz">9oz</label>
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="dimensions">Enter Dimensions:</label>
+                        <div class="dimensions-container">
+                            <input type="number" id="tab2length-feet" class="input-box" placeholder="Length-feet "
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab2length-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
+
+
+
+                            <input type="number" id="tab2width-feet" class="input-box" placeholder="Width-feet"
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab2width-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
+
+                        </div>
+
+
+                        <!-- <div class="dimensions-container">
+                            <input type="number" id="tab2bleed" class="input-box" placeholder="bleed">
+                            <input type="number" id="tab2pocket" class="input-box" placeholder="pocket">
+        
+                        </div> -->
+
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="finishingoptions">Finishing Options:</label>
+                        <div class="switch-container">
+                            <label class="switch">
+                                <input type="checkbox" id="tab2hemSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Hem</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab2grommetsSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Grommets every 2</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab2polepocketSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Pole Pocket</span>
+                            <label class="switch">
+                                <input type="checkbox" id="tab2straightcutedgeSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Straight Cut Edge</span>
+                            <label class="switch">
+                                <input type="checkbox" id="tab2webbingSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Webbing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <!-- <div class="form-item">
+                        <label for="bleedSwitch">Does Art Include Bleed:</label>
+                        <label class="switch">
+                            <input type="checkbox" id="tab2bleedSwitch">
+                            <span class="slider"></span>
+                        </label>
+                    </div> -->
+                    <div class="form-item">
+                        <label for="proofSwitch">Would You Like a Proof:</label>
+                        <label class="switch">
+                            <input type="checkbox" id="tab2proofSwitch">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="upgrades">Upgrades:</label>
+                        <div class="switch-container">
+                            <label class="switch">
+                                <input type="checkbox" id="tab2hqPrintingSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">HQ Printing</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab2expressPrintSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Express Print</span>
+
+                            <label class="switch">
+                                <input type="checkbox" id="tab2artServiceSwitch">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Art Service</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="orderNotes">Order Notes:</label>
+                        <textarea id="tab2orderNotes" class="text-box" placeholder="Enter order notes"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <button id="tab2orderNowBtn" class="btn">Order Now</button>
+                </div>
+                <div id="tab2orderSummary" style="display: none;">
+                    <!-- This div will display the order summary -->
+                    <h2>Order Summary</h2>
+                      <!-- This div will display the order summary -->
+                      <div id="tab2quantityvalue" class="summary-section"></div>
+                      <div id="tab2option" class="summary-section"></div>
+                      <div id="tab2pricing" class="summary-section"></div>
+                </div>
+            </div>
+        </div>
+
+  
+
+        <script src="scripts/banner.js"> </script>
+
+
+
+</body>
+
+</html>
